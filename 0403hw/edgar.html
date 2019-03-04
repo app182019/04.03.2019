@@ -1,0 +1,34 @@
+<html>
+        <head>
+                <title>I Love HTML</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </head>
+        <body>
+                <hr>
+                    <p>a = <input type="number" id="ainput"/></p>
+                    <button onclick="add()">Add</button> <br>
+                    <button onclick="print()">Print</button> <br>
+                </body>
+        <script>
+
+            var sum = 0
+            var a = 0
+
+            function add()
+            {
+                var b = parseInt($('#ainput').val()) // # is id , val brings me the text of the text-boxc
+                if (b == a)
+                {
+                    alert("you cannot use the same number twice")
+                    return
+                }
+                a = b
+                sum = sum + a
+            }
+            function print()
+            {
+                alert(sum)
+            }
+
+ </script>
+</html>

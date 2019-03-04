@@ -1,0 +1,67 @@
+<html>
+        <head>
+                <title>I Love HTML</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </head>
+        <body>
+                <hr>
+                    <p>a = <input type="number" id="ainput"/></p>
+                    <p>b = <input type="number" id="binput"/></p>
+                    <button onclick="add()">Add</button> <br>
+                    <button onclick="sub()">Subtract</button> <br>
+                    <button onclick="mul()">Multiply</button> <br>
+                    <button onclick="div()">Div</button> <br>
+                    <button onclick="whoIsBigger()">Who is bigger</button> <br>
+                </body>
+        <script>
+            function add()
+            {
+                var a = $('#ainput').val() // # is id , val brings me the text of the text-boxc
+                var b = $('#binput').val()
+                alert ( parseInt(a) + parseInt(b) )
+            }
+            function sub()
+            {
+                var a = $('#ainput').val() // # is id , val brings me the text of the text-boxc
+                var b = $('#binput').val()
+                alert ( parseInt(a) - parseInt(b) )
+            }
+            function mul()
+            {
+                var a = $('#ainput').val() // # is id , val brings me the text of the text-boxc
+                var b = $('#binput').val()
+                alert ( parseInt(a) * parseInt(b) )
+            }
+            function div()
+            {
+                var a = $('#ainput').val() // # is id , val brings me the text of the text-boxc
+                var b = $('#binput').val()
+
+                if (b == 0)
+                { 
+                    alert("Cannot divide by zero!")
+                }
+                else
+                {
+                    alert ( parseInt(a) / parseInt(b) )
+                }
+            }   
+            function whoIsBigger()
+            {
+                var a = parseInt($('#ainput').val()) // # is id , val brings me the text of the text-boxc
+                var b = parseInt($('#binput').val())
+                if (a > b)
+                {
+                    alert("a is bigger")
+                }
+                else if ( a == b )
+                {
+                    alert("equal")
+                }
+                else
+                {
+                    alert("b is bigger")
+                }
+            }                                             
+        </script>
+</html>

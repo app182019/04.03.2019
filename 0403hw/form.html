@@ -1,0 +1,24 @@
+<html>
+        <head>
+                <title>I Love HTML</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </head>
+        <body>
+                <hr>
+                    <p>First Name: <input type="text" id="fninput"/></p>
+                    <p>Last Name: <input type="text" id="lninput"/></p>
+                    <p>Birth date:  <input type="date" id="bdinput"/></p>
+                    <button onclick="printDetails()">Print</button> <br>
+                </body>
+        <script>
+            function printDetails()
+            {
+                var firstName = $('#fninput').val() // # is id , val brings me the text of the text-boxc
+                var lastName = $('#lninput').val()
+                var bDay = $('#bdinput').val()
+                //alert ("first name : " + firstName + " last name : " + lastName + " birthdate : " + bDay);
+                alert (`first name : ${firstName}\nlast name : ${lastName}\nbirthdate : ${bDay}`);
+            }
+                                                      
+        </script>
+</html>
