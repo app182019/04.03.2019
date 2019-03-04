@@ -1,0 +1,82 @@
+<html>
+        <head>
+                <title>I Love HTML</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </head>
+        <body>
+                <hr>
+                <form onsubmit="printDetails()" id="myForm">
+                    <p>First Name: <input type="text" id="fninput" required/></p>
+                    <p>Last Name: <input type="text" id="lninput" required/></p>
+                    <p>Birth date:  <input type="date" id="bdinput"/></p>
+                    <p>Email:  <input type="email" id="emailinput" required/></p>
+                    <p><input type="radio" name="gender" value="male" > Male<br>
+                        <input type="radio" name="gender" value="female" required> Female<br></p>
+                    <p>
+                            <select id="countryselect">
+                                    <option value="Israel">Israel</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="France">France</option>
+                                  </select>
+                    </p>
+                    <p>
+                            <input type="checkbox" name="veg" id="vegchk" value="vegetarian"> Vegetarian<br>
+                    </p>
+                    <button type="submit">Print</button> <br>
+                </form>
+
+                <button onclick="fillData()">Fill</button> <br>
+
+                </body>
+
+        <script>
+            function fillData()
+            {
+                
+                var p = {
+                    firstName : 'Itay',
+                    lastName : 'gold',
+                    bDay : '1976-12-07',
+                    email : 'itayhau@gmail.com',
+                    //gender : $("input[type='radio']:checked").val(),
+                    //country : $("#countryselect option:selected").text(),
+                    //veg : $('#vegchk').is(':checked')    
+                }
+
+                $('#fninput').val(p.firstName)
+                $('#lninput').val(p.lastName)
+                $('#bdinput').val(p.bDay)
+                $('#emailinput').val(p.email)
+
+                //  $('#fninput').val('hello')
+                // //  $('#fninput').val(p.firstName)
+
+            }
+            function printDetails()
+            {
+                var person = {
+                    firstName : $('#fninput').val(),
+                    lastName : $('#lninput').val(),
+                    bDay : $('#bdinput').val(),
+                    email : $('#emailinput').val(),
+                    gender : $("input[type='radio']:checked").val(),
+                    country : $("#countryselect option:selected").text(),
+                    veg : $('#vegchk').is(':checked')
+                }
+                //alert ("first name : " + firstName + " last name : " + lastName + " birthdate : " + bDay);
+
+                alertPerson( person )
+            }
+            function alertPerson(person)
+            {
+                alert (`first name : ${person.firstName}\nlast name : ${person.lastName}\nbirthdate : ${person.bDay}
+email : ${person.email} 
+gender : ${person.gender}
+country : ${person.country} 
+veg : ${person.veg}
+                `);
+            }
+                                                      
+        </script>
+</html>
